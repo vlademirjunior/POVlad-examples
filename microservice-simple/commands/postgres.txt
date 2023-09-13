@@ -1,0 +1,15 @@
+docker run -d --name auth-db -p 5432:5432 -e POSTGRES_DB=auth-db -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=123456 postgres:11
+docker run -d --name product-db -p 5433:5432 -e POSTGRES_DB=product-db -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=123456 postgres:11
+
+no dbeaver:
+Host: localhost
+Port: 5432
+Database: auth-db
+User: admin
+Password: 123456
+
+Host: localhost
+Port: 5433
+Database: product-db
+User: admin
+Password: 123456
